@@ -1,6 +1,7 @@
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 import java.util.Stack;
 
@@ -82,8 +83,7 @@ public class Main {
         }
 
         ArrayList<String> temporary = new ArrayList<>();
-        for(String s:checkingText)
-            temporary.add(s);
+        Collections.addAll(temporary, checkingText);
 
 
         checkingText = len.split(" ");
@@ -118,9 +118,9 @@ public class Main {
 
         checkingText = t.split(" ");
         for(int i=0; i<temporary.size();i++){
-            for(int j=0;j< checkingText.length;j++)
-                if(temporary.get(i).equals(checkingText[j])) {
-                    temporary.set(i,"");
+            for (String word : checkingText)
+                if (temporary.get(i).equals(word)) {
+                    temporary.set(i, "");
                 }
         }
   /*
