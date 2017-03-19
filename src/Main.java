@@ -123,6 +123,20 @@ public class Main {
                     temporary.set(i,"");
                 }
         }
+  /*
+        for (int i=0, j=0; i < temporary.size();i++)
+        {
+            if(temporary.get(i).equals(""))
+                temporary.set(i, checkingText[j++]);
+        }
+
+
+        String otherText="";
+        for(String s:temporary){
+            otherText+=s+" ";
+        }
+        writeToFile(otherText);
+       */
 
         String otherText="";
         for(String s:temporary){
